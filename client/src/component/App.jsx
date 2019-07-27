@@ -9,7 +9,7 @@ class App extends React.Component {
     console.log('here');
     return(
       <div>
-        hello from React
+        hello from React 2222
       </div>
     )
   }
