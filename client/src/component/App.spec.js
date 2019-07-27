@@ -1,7 +1,7 @@
-const React = require( 'react');
-const renderer = require( 'react-test-renderer');
-const enzyme = require('enzyme');
-const App = require( './App.jsx');
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { shallow } from'enzyme';
+import App from './App.jsx';
 
 describe('testing App component', ()=> {
   // it('renders three <Foo /> components', () => {
@@ -15,4 +15,10 @@ describe('testing App component', ()=> {
   it('knows that 3 and 2 make 4', () => {
     expect(3 + 2).toBe(5);
   });
-})
+
+  it('starts with a count of 0', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists()).toBe(true);
+  });
+
+});

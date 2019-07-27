@@ -6,7 +6,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('here');
+    // console.log('here');
     return(
       <div>
         hello from React 2222
