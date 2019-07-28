@@ -6,7 +6,12 @@ describe('Display', () => {
   let wrapper; 
 
   beforeEach(() => {
-    wrapper = shallow(<Display />);
+    wrapper = shallow(<Display displayValue={''}/>);
+  });
+
+  it('renders the value of displayValue', () => {
+    wrapper.setProps({ displayValue: 'this is the display;'});
+    expect(wrapper.text()).toEqual('this is the display;');
   });
 
   it ('check if the wrapper for Calculator component exist', () => {
@@ -15,5 +20,7 @@ describe('Display', () => {
 
   it ('should render a div component', () => {
     expect(wrapper.find('div').length).toEqual(1);
-  })
+  });
+
+  
 });

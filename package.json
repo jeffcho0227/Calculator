@@ -42,9 +42,13 @@
     "express": "^4.17.1",
     "jest-cli": "^24.8.0",
     "mongoose": "^5.5.2",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.18.11",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "webpack-combine-loaders": "^2.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
