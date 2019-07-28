@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Calculator from './Calculator.jsx';
-import Display from './Display.jsx';
+import Display from '../Display/Display.jsx';
 
 
 describe('testing Calculator component', () => {

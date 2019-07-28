@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from'enzyme';
 import App from './App.jsx';
-import Calculator from './Calculator.jsx';
+import Calculator from './Calculator/Calculator.jsx';
 
 describe('testing App component', ()=> {
   let wrapper;

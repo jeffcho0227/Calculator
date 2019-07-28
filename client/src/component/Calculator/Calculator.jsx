@@ -34,6 +34,7 @@ export default class Calculator extends React.Component {
     return(
       <div>
         <span className={style.test}>hello</span>
+        <input type="text" placeholde="type"/>
         <Display displayValue={displayValue}/>
         <Keypad 
           numbers={numbers}
