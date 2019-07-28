@@ -1,4 +1,5 @@
 import React from 'react';
+import Calculator from './Calculator.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -10,6 +11,7 @@ class App extends React.Component {
     return(
       <div>
         hello from React 2222
+          <Calculator />
       </div>
     )
   }
