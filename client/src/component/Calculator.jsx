@@ -1,4 +1,5 @@
 import React from 'react';
+import Display from './Display.jsx';
 
 export default class Calculator extends React.Component {
   constructor() {
@@ -15,7 +16,8 @@ export default class Calculator extends React.Component {
   render() {
     return(
       <div>
-        this is from Calculator;
+        <Display />
+        this is from Calculator
       </div>
     )
   }

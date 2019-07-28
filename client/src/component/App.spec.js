@@ -11,17 +11,19 @@ describe('testing App component', ()=> {
     wrapper = shallow(<App />);
   });
 
+  it('should render correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('knows that 2 and 2 make 4', () => {
     expect(2 + 2).toBe(4);
   });
 
   it('check if the wrapper for App component exist', () => {
-    // const wrapper = shallow(<App />);
     expect(wrapper.exists()).toBe(true);
   });
 
   it('renders one div component', () => {
-    // const wrapper = shallow(<App />);
     expect(wrapper.find('div')).toHaveLength(1);
   });
 
