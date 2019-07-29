@@ -19,7 +19,7 @@ describe('Display', () => {
   });
 
   it ('should render a div component', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+    expect(wrapper.find('div').length).toEqual(4);
   });
 
   

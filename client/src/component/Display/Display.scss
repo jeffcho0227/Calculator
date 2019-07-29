@@ -1,3 +1,28 @@
-.test {
-  color: rgb(98, 0, 255);
+.displayContainer {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding: 10px 0px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  
+  .displayMain {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    text-align: center;
+    background: white;
+    margin: auto;
+
+    .displayNum {
+      color: pink;
+    }
+    
+  }
+  .displayLine {
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    border-bottom: 2px solid grey;
+  }
 }

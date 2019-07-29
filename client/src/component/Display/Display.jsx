@@ -5,9 +5,13 @@ import style from './Display.scss';
 const Display = ({ displayValue }) => {
   console.log(displayValue);
   return(
-    <div>
-      {/* { displayValue } */}
-      this is the display;
+    <div className={style.displayContainer}>
+      <div className={style.displayMain}>
+        <div className={style.displayNum}>
+          this is the display;
+        </div>
+      </div>
+      <div className={style.displayLine}></div>
     </div>
   )
 };

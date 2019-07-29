@@ -6,3 +6,16 @@
   box-sizing: inherit;
 }
 
+.btnContainer {
+  width: 98%;
+  text-align: center; 
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.allBtuContainer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}

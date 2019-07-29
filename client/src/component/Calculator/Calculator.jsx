@@ -2,14 +2,15 @@ import React from 'react';
 import Display from '../Display/Display.jsx';
 import Keypad from '../Keypad/Keypad.jsx';
 import style from './Calculator.scss';
+import Buttons from '../Buttons/Buttons.jsx';
 
 export default class Calculator extends React.Component {
   constructor() {
     super();
     this.state = {
       displayValue: '1', 
-      numbers: [],
-      operators: [],
+      numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', 'C'],
+      operators: ['+', '-', 'x', '/'],
       selectedVale: '',
       selectedOp: '',
     };
@@ -33,8 +34,6 @@ export default class Calculator extends React.Component {
 
     return(
       <div>
-        <span className={style.test}>hello</span>
-        <input type="text" placeholde="type"/>
         <Display displayValue={displayValue}/>
         <Keypad 
           numbers={numbers}

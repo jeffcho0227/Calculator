@@ -1,0 +1,32 @@
+.allBtuContainer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .numContainer {
+    text-align: center; 
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 75%
+    
+  }
+  .operatorContainer {
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    width: 25%;
+  }
+
+  .submit{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+
+}
