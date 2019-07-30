@@ -3,7 +3,6 @@ import style from './Buttons.scss';
 import PropTypes from 'prop-types';
 
 const Buttons = (props) => {
-  console.log(props.keyAction);
   return(
     <div className={style.buttonsContainer}>
         <p>

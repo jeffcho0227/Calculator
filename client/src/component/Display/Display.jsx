@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import style from './Display.scss';
 
 const Display = ({ displayValue }) => {
-  console.log(displayValue);
   return(
     <div className={style.displayContainer}>
       <div className={style.displayMain}>

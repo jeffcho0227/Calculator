@@ -1,12 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Buttons from './Buttons.jsx';
+import { JestEnvironment } from '@jest/environment';
 
 describe('Buttons', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Buttons />);
+    wrapper = shallow(
+      <Buttons 
+        keyAction={jest.fn()}
+        keyType={'type'}
+        keyValue={'value'}/>
+      );
   });
 
   it ('check if the wrapper for Buttons component exist', () => {

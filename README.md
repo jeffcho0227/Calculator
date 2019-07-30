@@ -19,10 +19,5 @@ npm run test:c
 
 
 ## Tech Used
-React
-Express
-Jest
-Enzyme
-TDD (Test Driven Development)
-Scss
+React, Express, Jest, Enzyme, TDD (Test Driven Development), Scss
 
