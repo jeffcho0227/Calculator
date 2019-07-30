@@ -52,9 +52,7 @@ describe('mounted Keypad', () => {
       />
     )
 
-    wrapper.setProps({
-        numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', 'C']
-    });
+    wrapper.setProps({ numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', 'C'] });
     expect(wrapper.find('.numContainer').text()).toEqual('1234567890.C');
   });
 
@@ -69,9 +67,7 @@ describe('mounted Keypad', () => {
     />
     )
 
-  wrapper.setProps({
-      operators: ['+', '-', 'x', '/']
-  });
+  wrapper.setProps({ operators: ['+', '-', 'x', '/'] });
   expect(wrapper.find('.operatorContainer').text()).toEqual('+-x/');
   })
 

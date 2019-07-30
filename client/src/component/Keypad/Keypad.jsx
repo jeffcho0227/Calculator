@@ -10,16 +10,31 @@ const Keypad = (props) => {
     <div className={style.allBtuContainer}>
       <div className={style.numContainer}>
         {props.numbers.map((num, idx) => {
-          return <Buttons val={num} key={idx}/>
+          return <Buttons 
+                    val={num} 
+                    key={idx}
+                    keyAction={() => console.log('ok')}
+                    keyType={'numbers'}
+                    keyValue={num}/>
         })}
       </div>
       <div className={style.operatorContainer}>
         {test.map((op, idx) => {
-          return <Buttons val={op} key={idx}/>
+          return <Buttons 
+                    val={op} 
+                    key={idx} 
+                    keyAction={() => console.log('what')}
+                    keyType={'operator'}
+                    keyValue={op}/>
+                    
         })}
       </div>
       <div className={style.submit}>
-        <Buttons val={'='}/>
+        <Buttons 
+          val={'='}  
+          keyAction={() => console.log('hi')}
+          keyType={'submit'}
+          keyValue={'='}/>
       </div>
     </div>
    </div>
@@ -28,7 +43,7 @@ const Keypad = (props) => {
 
 Keypad.propTypes = {
   numbers: PropTypes.array.isRequired,
-  operators: PropTypes.array.isRequired,
+  // operators: PropTypes.array.isRequired,
   setOperator: PropTypes.func.isRequired,
   updateDisplay: PropTypes.func.isRequired,
 }
