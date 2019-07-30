@@ -1,5 +1,5 @@
 # Calculator
-A calculator that allows users to do basic operations.
+A calculator that allows users to do basic operations. This application is a TDD with jest and enzyme. 
 
 ## How To Start 
 ```
