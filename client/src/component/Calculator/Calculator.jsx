@@ -37,7 +37,7 @@ export default class Calculator extends React.Component {
         <Display displayValue={displayValue}/>
         <Keypad 
           numbers={numbers}
-          operators={operators}
+          operators={this.state.operatros}
           setOperator={this.setOperator}
           updateDisplay={this.updateDisplay}
         />

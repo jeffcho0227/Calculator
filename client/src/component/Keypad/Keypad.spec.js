@@ -43,18 +43,36 @@ describe('mounted Keypad', () => {
   // });
 
   it('renders the values of numbers', () => {
-    const wrapper = mount(
+    let wrapper = mount(
       <Keypad
-        // callOperator={jest.fn()}
+        callOperator={jest.fn()}
         numbers={[]}
         setOperator={jest.fn()}
-        // updateDisplay={jest.fn()}
+        updateDisplay={jest.fn()}
       />
-  )
-    // console.log(wrapper.debug());
+    )
+
     wrapper.setProps({
         numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', 'C']
     });
     expect(wrapper.find('.numContainer').text()).toEqual('1234567890.C');
   });
+
+  it(`renders the values of operatros`, () => {
+    let wrapper = mount(
+      <Keypad
+      callOperator={jest.fn()}
+      numbers={[]}
+      operators={[]}
+      setOperator={jest.fn()}
+      updateDisplay={jest.fn()}
+    />
+    )
+
+  wrapper.setProps({
+      operators: ['+', '-', 'x', '/']
+  });
+  expect(wrapper.find('.operatorContainer').text()).toEqual('+-x/');
+  })
+
 });

@@ -4,6 +4,7 @@ import Buttons from '../Buttons/Buttons.jsx';
 import style from './Keypad.scss';
 
 const Keypad = (props) => {
+  let test = ['+', '-', 'x', '/'];
  return (
    <div>
     <div className={style.allBtuContainer}>
@@ -13,12 +14,9 @@ const Keypad = (props) => {
         })}
       </div>
       <div className={style.operatorContainer}>
-        {/* {props.operators.map((op, idx) => {
-          console.log(op)
-          return (
-          <Buttons val={op} key={idx}/>
-          )
-        })} */}
+        {test.map((op, idx) => {
+          return <Buttons val={op} key={idx}/>
+        })}
       </div>
       <div className={style.submit}>
         <Buttons val={'='}/>
