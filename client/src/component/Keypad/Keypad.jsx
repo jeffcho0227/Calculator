@@ -11,29 +11,29 @@ const Keypad = (props) => {
       <div className={style.numContainer}>
         {props.numbers.map((num, idx) => {
           return <Buttons 
-                    val={num} 
+                    // val={num} 
                     key={idx}
-                    keyAction={() => console.log('ok')}
-                    keyType={'numbers'}
+                    keyAction={props.updateDisplay}
+                    keyType={'numbers-key'}
                     keyValue={num}/>
         })}
       </div>
       <div className={style.operatorContainer}>
         {test.map((op, idx) => {
           return <Buttons 
-                    val={op} 
+                    // val={op} 
                     key={idx} 
                     keyAction={() => console.log('what')}
-                    keyType={'operator'}
+                    keyType={'operators-key'}
                     keyValue={op}/>
                     
         })}
       </div>
       <div className={style.submit}>
         <Buttons 
-          val={'='}  
+          // val={'='}  
           keyAction={() => console.log('hi')}
-          keyType={'submit'}
+          keyType={'submit-key'}
           keyValue={'='}/>
       </div>
     </div>

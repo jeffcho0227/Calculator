@@ -15,10 +15,6 @@ describe('testing App component', ()=> {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('knows that 2 and 2 make 4', () => {
-    expect(2 + 2).toBe(4);
-  });
-
   it('check if the wrapper for App component exist', () => {
     expect(wrapper.exists()).toBe(true);
   });

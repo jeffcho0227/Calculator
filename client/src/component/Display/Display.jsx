@@ -7,7 +7,7 @@ const Display = ({ displayValue }) => {
     <div className={style.displayContainer}>
       <div className={style.displayMain}>
         <div className={style.displayNum}>
-          this is the display;
+          { displayValue }
         </div>
       </div>
       <div className={style.displayLine}></div>

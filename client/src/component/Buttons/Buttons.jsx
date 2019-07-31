@@ -2,11 +2,12 @@ import React from 'react';
 import style from './Buttons.scss';
 import PropTypes from 'prop-types';
 
-const Buttons = (props) => {
+const Buttons = ({ keyAction, keyType, keyValue}) => {
   return(
-    <div className={style.buttonsContainer}>
+    <div className={`${style.buttonsContainer} ${keyType}`}
+          onClick={() => keyAction(keyValue)}>
         <p>
-          {props.val}
+          { keyValue }
         </p>
     </div>
   )

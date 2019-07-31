@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Buttons from './Buttons.jsx';
-import { JestEnvironment } from '@jest/environment';
 
 describe('Buttons', () => {
   let wrapper;
