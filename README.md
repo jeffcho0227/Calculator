@@ -1,6 +1,8 @@
 # Calculator
 A calculator that allows users to do basic operations. This application is a TDD with jest and enzyme. 
 
+Set up the application using mobile first approach
+
 ## How To Start 
 ```
 clone the repo

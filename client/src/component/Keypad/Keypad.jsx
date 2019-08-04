@@ -23,7 +23,7 @@ const Keypad = (props) => {
           return <Buttons 
                     // val={op} 
                     key={idx} 
-                    keyAction={() => console.log('what')}
+                    keyAction={props.setOperator}
                     keyType={'operators-key'}
                     keyValue={op}/>
                     
@@ -32,7 +32,7 @@ const Keypad = (props) => {
       <div className={style.submit}>
         <Buttons 
           // val={'='}  
-          keyAction={() => console.log('hi')}
+          keyAction={props.callOperator}
           keyType={'submit-key'}
           keyValue={'='}/>
       </div>

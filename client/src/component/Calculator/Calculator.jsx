@@ -11,7 +11,7 @@ export default class Calculator extends React.Component {
       displayValue: '0', 
       numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', 'C'],
       operators: ['+', '-', 'x', '/'],
-      selectedVals: '',
+      storedValue: '',
       selectedOp: '',
     };
 
@@ -20,30 +20,66 @@ export default class Calculator extends React.Component {
     this.callOperator = this.callOperator.bind(this);
   }
 
-  setOperator() {
-    console.log('setOperator');
+  setOperator(value) {
+    let { displayValue, selectedOp, storedValue } = this.state;
+
+    if (selectedOp === '') {
+      storedValue = displayValue;
+      displayValue = '0';
+      selectedOp = value;
+    } else {
+      selectedOp = value;
+    }
+
+    this.setState({ displayValue, selectedOp, storedValue }, () => console.log(this.state));
   };
 
   updateDisplay(val) {
     let { displayValue } = this.state;
-    if (val === '.' && displayValue.includes('.')) {
-      value = '';
-    }
+
+    if (val === '.' && displayValue.includes('.')) val = '';
 
     if (val === 'ce') {
-      displayValue = displayValue.substr(0, displayValue.length -1);
-      if (displayValue === '') {
-        displayValue = '0';
-      }
+      displayValue = displayValue.substr(0, displayValue.length - 1);
+      if (displayValue === '') displayValue = '0';
     } else {
-      displayValue === '0' ? displayValue = val : displayValue += val;
+      displayValue === '0' ? (displayValue = val) : (displayValue += val);
     }
 
     this.setState({ displayValue });
   };
 
   callOperator() {
-    console.log('called Operator')
+    let { displayValue, selectedOp, storedValue } = this.state;
+    let updateStoredValue = displayValue;
+
+    displayValue = parseInt(displayValue, 10);
+    storedValue = parseInt(storedValue, 10);
+
+    switch(selectedOp) {
+      case '+':
+        displayValue = storedValue + displayValue;
+        break;
+      case '-':
+        displayValue = storedValue - displayValue;
+        break;
+      case 'x':
+        displayValue = storedValue * displayValue;
+        break;
+      case '/':
+        displayValue = storedValue / displayValue;
+        break;
+      default: 
+        displayValue = '0';
+    }
+
+    displayValue = displayValue.toString();
+    selectedOp = '';
+    if (displayValue === 'NaN' || displayValue === 'Infinity') {
+      displayValue = '0';
+    }
+
+    this.setState({ displayValue, selectedOp , storedValue: updateStoredValue })
   }
 
   
@@ -59,6 +95,7 @@ export default class Calculator extends React.Component {
           operators={this.state.operatros}
           setOperator={this.setOperator}
           updateDisplay={this.updateDisplay}
+          callOperator={this.callOperator}
         />
       </div>
     )
